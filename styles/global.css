@@ -1,0 +1,388 @@
+html,
+body {
+  height: 100%;
+}
+
+#__next {
+  height: 100%;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.wrapper_btn {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.required::after {
+  content: " *";
+  color: red;
+}
+
+input[type="checkbox"] {
+  cursor: pointer;
+}
+
+input[type="date"] {
+  flex-direction: row-reverse;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: block;
+  background: url("/calendar.svg") no-repeat;
+  background-position: center;
+  border: 1px solid #a3a3a3;
+  border-width: thin;
+  border-radius: 10px;
+  color: rgba(0, 0, 0, 0);
+  width: 25px;
+  height: 25px;
+  opacity: 1;
+  padding: 1px 10px;
+  cursor: pointer;
+}
+
+input[type="date"]::-webkit-datetime-edit {
+  padding-left: 10px;
+}
+
+fieldset {
+  border: 0;
+}
+
+.default_select,
+.table_size_select {
+  appearance: none;
+  cursor: pointer;
+}
+
+.default_select:focus {
+  outline: none;
+}
+
+.default_select:focus + .select_label_lg::after {
+  transform: rotate(90deg);
+}
+
+.select_label_auto,
+.select_label_lg,
+.select_label_sm,
+.table_size_label {
+  position: relative;
+}
+
+.select_label_auto::after,
+.select_label_lg::after,
+.select_label_sm::after {
+  content: ">";
+  color: #656565;
+  padding: 0 0 2px;
+  position: absolute;
+  pointer-events: none;
+}
+
+label.clicked::after {
+  transform: rotate(90deg);
+}
+
+.select_label_auto:focus-within::after,
+.select_label_lg:focus-within::after,
+.select_label_sm:focus-within::after {
+  transform: rotate(90deg);
+}
+
+.select_label_auto::before,
+.select_label_lg::before,
+.select_label_sm::before {
+  content: "";
+  right: 0px;
+  background: #ffffff;
+  border: 1px solid #656565;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  position: absolute;
+  pointer-events: none;
+  display: block;
+}
+
+.select_label_auto::after {
+  font: 20px "Consolas", monospace;
+  right: -14.5px;
+  top: 8px;
+}
+
+.select_label_auto::before {
+  width: 23px;
+  height: 44px;
+  top: -1px;
+  right: -20px;
+}
+
+.select_label_lg::after {
+  font: 20px "Consolas", monospace;
+  right: 6px;
+  top: -3px;
+}
+
+.select_label_lg::before {
+  width: 23px;
+  height: 43px;
+}
+
+.select_label_sm::after {
+  font: 15px "Consolas", monospace;
+  right: 2px;
+  top: -6px;
+}
+
+.select_label_sm::before {
+  width: 11.5px;
+  height: 27px;
+}
+
+.margin_label::before {
+  top: -12px;
+}
+
+.wrapper_table {
+  overflow: scroll;
+  width: 100%;
+}
+
+.wrapper_table::-webkit-scrollbar {
+  width: 15px;
+  height: 15px;
+}
+
+.wrapper_table::-webkit-scrollbar-track {
+  background: #ffffff;
+  border: 1px solid #a3a3a3;
+  margin-block: 0.5em;
+}
+
+.wrapper_table::-webkit-scrollbar-thumb {
+  background: #d9d9d9;
+  background-clip: content-box;
+  border: 3px solid transparent;
+  border-radius: 5px;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 20px 15px;
+  box-shadow: 0px 4px 4px 0px #00000040;
+  position: relative;
+}
+
+table tr:first-child td,
+table tr:first-child th {
+  border-top: 0 !important;
+}
+
+table th:first-child {
+  border-left: 1px solid #656565;
+}
+
+table tr:last-child td,
+table tr:last-child th {
+  border-bottom: 0 !important;
+}
+
+table tr td:last-child,
+table tr th:last-child {
+  border-right: 0 !important;
+}
+
+thead {
+  border-bottom: 0.5px solid #656565;
+}
+
+th {
+  padding: 0 10px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+td {
+  padding: 0 10px;
+}
+
+.clasificator_td {
+  padding: 35px 15px;
+}
+
+.resizer {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 5px;
+  background: rgba(0, 0, 0, 0.5);
+  cursor: col-resize;
+  user-select: none;
+  touch-action: none;
+}
+
+.resizer.isResizing {
+  background: blue;
+  opacity: 1;
+}
+
+@media (hover: hover) {
+  .resizer {
+    opacity: 0;
+  }
+
+  *:hover > .resizer {
+    opacity: 1;
+  }
+}
+
+.search,
+.search_small {
+  width: 80%;
+  height: 29px;
+  background: #ffffff;
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  padding: 5px 0;
+  padding-left: 40px;
+  font-size: 13px;
+  font-weight: 300;
+  color: #000000;
+}
+
+.search_small {
+  width: 50%;
+  padding-left: 35px;
+}
+
+.search_btn {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: absolute;
+  top: 15%;
+  left: 5%;
+}
+
+.circle_dots {
+  position: relative;
+  background: #e7e7e7;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.circle_dots::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 2px;
+  height: 2px;
+  margin-left: -1px;
+  margin-top: -1px;
+  background-color: #686868;
+  border-radius: 50%;
+  box-shadow: 6px 0 0 1px #686868, 0 0 0 1px #686868, -6px 0 0 1px #686868;
+}
+
+.pagination_btn {
+  background: #ffffff;
+  border: none;
+  font-size: 19px;
+  cursor: pointer;
+}
+
+.page_btn {
+  background: #ffffff;
+  border: 0.5px solid #000000;
+  border-radius: 5px;
+  color: #000000;
+  cursor: pointer;
+  margin-right: 7px;
+}
+
+.page_btn_active {
+  background: #076ac9;
+  color: #ffffff;
+}
+
+.table_size_select {
+  border: 1px solid #c8c8c8;
+  color: #656565;
+  font-family: "Montserrat";
+  font-size: 16px;
+  height: 24px;
+  padding: 2px 20px;
+  padding-left: 30px;
+  text-align: center;
+  outline: none;
+}
+
+.table_size_select option {
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #656565;
+}
+
+.table_size_label::after {
+  content: ">";
+  color: #5a5251;
+  font: 15px "Consolas", monospace;
+  padding-left: 7px;
+  position: absolute;
+  left: 0;
+  top: 1px;
+  pointer-events: none;
+  transform: rotate(90deg);
+}
+
+.table_size_label::before {
+  content: "";
+  left: 0px;
+  background: #ffffff;
+  border: 1px solid #d9d9d9;
+  position: absolute;
+  pointer-events: none;
+  display: block;
+  width: 15px;
+  height: 24px;
+}
+/* pagination_formulare_clasificatoare */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.pagination li {
+  list-style: none;
+}
+.page-link {
+  display: inline-block;
+  padding: 10px;
+  margin: 0 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: center;
+  transition: all 0.2s ease-in-out;
+}
+
+.page-link.active {
+  background-color: #343d70;
+  color: white;
+}

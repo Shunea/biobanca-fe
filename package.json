@@ -1,0 +1,58 @@
+{
+  "name": "usmf-covid",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "find:unused": "next-unused"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/server": "^11.10.0",
+    "@emotion/styled": "^11.10.5",
+    "@mui/material": "^5.10.14",
+    "@next/font": "^13.0.3",
+    "@nivo/bar": "^0.80.0",
+    "@nivo/core": "^0.80.0",
+    "@nivo/pie": "^0.80.0",
+    "@tanstack/react-query": "^4.22.0",
+    "@tanstack/react-query-devtools": "^4.19.1",
+    "@tanstack/react-table": "^8.7.6",
+    "@tanstack/react-virtual": "^3.0.0-alpha.0",
+    "axios": "^1.2.0",
+    "iron-session": "^6.3.1",
+    "jwt-decode": "^3.1.2",
+    "next": "13.0.3",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-hook-form": "^7.41.0",
+    "react-to-print": "^2.14.11",
+    "sharp": "^0.31.3",
+    "xlsx": "^0.18.5",
+    "zustand": "^4.1.5"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.9",
+    "@types/react": "^18.0.25",
+    "@types/react-dom": "^18.0.9",
+    "eslint": "^8.27.0",
+    "eslint-config-next": "^13.0.3",
+    "next-unused": "^0.0.6",
+    "typescript": "^4.9.3"
+  },
+  "next-unused": {
+    "include": [
+      "components",
+      "features",
+      "hooks",
+      "lib",
+      "stores",
+      "styles",
+      "types",
+      "utils"
+    ]
+  }
+}
